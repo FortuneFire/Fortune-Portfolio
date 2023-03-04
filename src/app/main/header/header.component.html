@@ -1,0 +1,14 @@
+<nav>
+    <a routerLink="/"><img src="../../../assets/images/logo.png" frameborder="0"></a>
+
+   <div class="navLinks">
+        <div *ngIf="loggedIn">
+            <button class="dashboard">DashBoard</button>
+            <button class="dashboard">Sign Out</button>
+        </div>
+
+        <div *ngIf="!loggedIn">
+            <button class="dashboard">Sign In / Sign Up</button>
+        </div>
+   </div>
+</nav>

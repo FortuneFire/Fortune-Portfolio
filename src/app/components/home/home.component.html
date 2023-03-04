@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="grid">
+
+        <div class="heading-text-container">
+            <h1>Front-end Developer and Web Designer</h1>
+        </div>
+        <div class="img-container">
+            <img src="../../../assets/images/fortue-profile-01.png" alt="profile picture" class="img-responsive">
+        </div>
+    
+        <div class="btn">
+            <button *ngFor="let button of buttons">
+                <!-- <a href="">
+                {{button}}
+                </a> -->
+                <a *ngIf="button === 'Portfolio'" routerLink="/portfolio">{{button}}</a>
+                <a *ngIf="button === 'Git Hub'" href="https://github.com/FortuneFire" target="_blank">{{button}}</a>
+                <a *ngIf="button === 'My Blog'" href="https://pronounced.hashnode.dev/" target="_blank">{{button}}</a>
+            </button>
+        </div>
+    </div>
+</div>

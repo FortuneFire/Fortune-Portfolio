@@ -1,0 +1,51 @@
+nav{
+    max-width: 1600px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+}
+
+a > img{
+    max-width: 15rem;
+}
+
+.navLinks{
+    display: flex;
+}
+
+.navLinks div{
+    display: flex;
+    align-items: center;
+}
+
+.navLinks div button{
+    height: 2.5rem;
+    width: 8rem;
+    margin: 0 0 0 1.5rem;
+    border: none;
+    background-color: var(--red);
+    color: #fff;
+    box-shadow: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.navLinks div button:hover{
+    background-color: var(--dark-gray);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+@media (max-width: 834px) {
+    nav{
+        width: 100vw;
+        padding: 0 1rem;
+    }
+
+    a > img{
+        max-width: 10rem;
+    }
+    .navLinks div button{
+        height: 2rem;
+    }
+}
