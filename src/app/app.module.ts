@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -8,8 +8,10 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { HeaderComponent } from './main/header/header.component';
+import { HeaderComponent } from './components/header/header.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
+import { ProjectFormComponent } from './components/projects/project-form.component';
+import { NgxFileDropModule } from 'ngx-file-drop';
 
 const appRoutes = [
   {path: "", component: HomeComponent },
@@ -26,7 +28,8 @@ const appRoutes = [
     PortfolioComponent,
     DashboardComponent,
     HeaderComponent,
-    SignInComponent
+    SignInComponent,
+    ProjectFormComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +37,7 @@ const appRoutes = [
     RouterModule.forRoot(appRoutes),
     FormsModule,
     ReactiveFormsModule,
+    NgxFileDropModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
