@@ -30,11 +30,12 @@ form {
   
   .category, .skills {
     margin: 10px;
+    font-weight: normal;
   }
 
- 
-  
-  
+  label {
+    font-weight: normal;
+  }
   
   input[type="file"] {
     margin-top: 10px;
