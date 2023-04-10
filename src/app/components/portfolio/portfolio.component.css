@@ -52,6 +52,7 @@ hr{
 	grid-template-columns: repeat(auto-fit, 300px);
   gap: 5rem;
 	justify-content: center;
+  padding-bottom: 4rem;
 }
 
 /* Style the counter cards */
@@ -154,10 +155,12 @@ hr{
     width: 100%;
     height: 2.5rem;
     /* width: 8rem; */
-    margin: 0 0 0 1.5rem;
+    /* margin: 0 0 2.5rem; */
     border: none;
     background-color: var(--red);
     color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     box-shadow: none;
     transition: box-shadow 0.3s ease;
   }
@@ -167,3 +170,57 @@ hr{
     box-shadow: 0px 0px 15px rgb(0 0 0 / 50%);
     cursor: pointer;
   }
+
+.project-title{ 
+  color: var(--dark-gray);
+  padding-bottom: 1rem;
+  text-decoration: underline var(--red) 2px;
+  text-underline-offset: 2px;
+}
+
+.cardVeiw-body{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+}
+
+.project-details{
+  background-color: var(--light-gray);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.cardVeiw-body>div>h3{
+  margin: 1rem;
+  text-align: center;
+  color: var(--dark-gray);
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 150px);
+  gap: 1rem;
+  padding: 0;
+  place-items: center;
+  justify-content: center;
+}
+
+.skill {
+  height: 50px;
+  width: 150px;
+  background-color: #7a2324bc ;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-images{
+  padding: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .cardVeiw-body{
+    grid-template-columns: 1fr;
+  }
+}

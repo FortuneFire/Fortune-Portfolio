@@ -1,48 +1,73 @@
 <div class="container">
+  <h2 class="page-title">Projects</h2>
 
-    <h2 class="page-title">Projects</h2>
+  <hr />
 
-    <hr>
+  <!-- Filter -->
+  <section class="portfolio-tab">
+    <ul *ngIf="!selectedCard" id="filters" class="clearfix">
+      <li
+        *ngFor="let project_category of project_filter_categories"
+        class="filter"
+        data-filter=".snippet"
+        (click)="onCategoryClick(project_category)"
+      >
+        {{ project_category }}
+      </li>
+    </ul>
 
-      <!-- Filter -->
-    <section class="portfolio-tab">
-   
-        <ul id="filters" class="clearfix"> 
-            <li  *ngFor="let project_category of project_filter_categories" class="filter" data-filter=".snippet" (click)="onCategoryClick(project_category)">{{project_category}}</li>
-        </ul>
-    
-    </section>
+    <button *ngIf="selectedCard" class="back-to-cards" (click)="backToCards()">
+      Back to Projects
+    </button>
+  </section>
 
-    <hr>
+  <hr />
 
-    <!-- Portfolio Cards -->
-    <section >
-
+  <!-- Portfolio Cards -->
+  <section>
     <div class="card-container" *ngIf="!selectedCard">
       <div class="card" *ngFor="let project of filteredProjects">
         <div class="content">
           <div class="front" (click)="onCardClick(project)">
-            <img class="profile-img" width="100%" src={{project.keyIMG}} alt="project-key-img">
+            <img
+              class="profile-img"
+              width="100%"
+              src="{{ project.keyIMG }}"
+              alt="project-key-img"
+            />
             <h2>Project1</h2>
           </div>
           <div class="back from-bottom" (click)="onCardClick(project)">
             <h2>Description</h2>
             <p class="description">
-              {{project.highlight}}
+              {{ project.highlight }}
             </p>
           </div>
         </div>
       </div>
     </div>
 
-    <div *ngIf="selectedCard">
-      <button class="back-to-cards" (click)="backToCards()">Back to Cards</button>
-      <h2>{{selectedCard.title}}</h2>
-      <p>{{selectedCard.description}}</p>
-      <!-- other details here -->
-    </div>  
-    
-    </section>
-    
+    <div class="cardView" *ngIf="selectedCard">
+      <!-- <button class="back-to-cards" (click)="backToCards()">Back to Cards</button> -->
+      <h2 class="project-title">{{ selectedCard.title }}</h2>
+      <div class="cardVeiw-body">
+        <div class="project-details">
+          <h3>Project Description</h3>
+          <p>{{ selectedCard.description }}</p>
+          <h3>Project Description</h3>
+          
+          <ul class="skills">
+            <li *ngFor="let skill of selectedCard.skills" class="skill">
+            {{skill}}
+            </li>
+          </ul>
+        </div>
+        <div class="project-images">
+          <h3>Project Images</h3>
+        </div>
+      </div>
 
+      <!-- other details here -->
+    </div>
+  </section>
 </div>
