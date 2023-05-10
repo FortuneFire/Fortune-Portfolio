@@ -7,10 +7,8 @@ import { NgxFileDropModule } from 'ngx-file-drop';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
-import { environment } from 'src/environments/environment';
-import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+
+
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -48,9 +46,6 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    AngularFirestoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
