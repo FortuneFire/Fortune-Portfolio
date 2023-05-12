@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "fortune-portfolio-app": {
+      "hosting": {
+        "fortune-portfolio": [
+          "fortune-portfolio-app"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "fortune-portfolio-app"
+  }
+}

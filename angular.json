@@ -96,6 +96,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "fortune-portfolio:build:production",
+            "firebaseProject": "fortune-portfolio-app",
+            "firebaseHostingSite": "fortune-portfolio-app"
+          }
         }
       }
     }
