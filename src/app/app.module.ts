@@ -30,7 +30,6 @@ const appRoutes: Routes = [
   { path: 'portfolio', component: PortfolioComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: '**', redirectTo: '' }
-
 ];
 
 @NgModule({
@@ -41,7 +40,7 @@ const appRoutes: Routes = [
     DashboardComponent,
     HeaderComponent,
     SignInComponent,
-    ProjectFormComponent
+    ProjectFormComponent,
   ],
   imports: [
     BrowserModule,

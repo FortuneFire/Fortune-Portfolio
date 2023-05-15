@@ -27,14 +27,5 @@
     </div>
   </div>
 
-  <label>mainImage:</label>
-  <div class="drop-zone" (dragover)="onDragOver($event)" (drop)="onDrop($event)" [class.drag-over]="isDraggingOver">
-    <p>Drag and drop an image here or click to select one.</p>
-    <input type="file" (change)="onFileSelected($event)" accept="image/*" class="file-input">
-  </div>
-
-    <mat-label>Gallery</mat-label>
-    <input type="file" (change)="onGallerySelected($event)" accept="image/*" multiple>
-
   <button type="submit">Submit</button>
 </form>
