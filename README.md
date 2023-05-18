@@ -1,4 +1,4 @@
-# Code & Canvas: A Showcase of Web Dev, Design, and Graphics
+# Fortune Portfolio: A Showcase of Web Dev, Design, and Graphics
 
 Welcome to my Portfolio Website! Get ready to embark on an exciting journey through the captivating world of web development, web design, and graphic design. This portfolio showcases my craftsmanship and creativity, utilizing the power of Angular, JS, TypeScript, CSS, HTML, and a Firebase backend.
 
