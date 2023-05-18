@@ -33,7 +33,7 @@ Immerse yourself in each project's captivating story! Our single project view un
 
 ## Feedback and Contact
 
-I value your feedback and suggestions. If you have any questions, comments, or would like to discuss potential collaborations, please feel free to reach out to me. You can contact me via email at fmlilo15@gmail.com.
+I value your feedback and suggestions. If you have any questions, comments, or would like to discuss potential collaborations, please feel free to reach out to me. 
 
 Thank you for visiting my portfolio website repo! I hope you enjoy exploring my projects and witnessing my passion for web development, web design, and graphic design.
 
