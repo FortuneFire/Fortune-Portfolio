@@ -94,6 +94,37 @@ export class ProjectFormComponent implements OnInit {
     }
   }
 
+  // onSubmit() {
+  //   const selectedCategories = this.categoriesFormArray.value
+  //     .map((checked: boolean, i: number) => checked ? this.categories[i] : null)
+  //     .filter((v: string | null) => v !== null);
+  //   const selectedSkills = this.skillsFormArray.value
+  //     .map((checked: boolean, i: number) => checked ? this.skills[i] : null)
+  //     .filter((v: string | null) => v !== null);
+  
+  //   const keyImageFile = this.projectForm.value.keyImage; // Get the selected key image file
+  
+  //   const projectData: Project = {
+  //     title: this.projectForm.value.title,
+  //     highlight: this.projectForm.value.highlight,
+  //     description: this.projectForm.value.description,
+  //     skills: selectedSkills,
+  //     category: selectedCategories,
+  //     keyIMG: '', // Placeholder for the key image URL (to be updated later)
+  //     gallery: [] // Placeholder for the gallery image URLs (to be updated later)
+  //   };
+  
+  //   this.portfolioService.addProject(projectData, keyImageFile) // Pass the key image file to the addProject method
+  //     .then(() => {
+  //       // Reset the form and any other necessary operations after successful submission
+  //       this.projectForm.reset();
+  //     })
+  //     .catch((error) => {
+  //       // Handle any errors that occur during the submission
+  //       console.error('Error:', error);
+  //     });
+  // }
+  
   onSubmit() {
     const selectedCategories = this.categoriesFormArray.value
       .map((checked: boolean, i: number) => checked ? this.categories[i] : null)
@@ -101,7 +132,10 @@ export class ProjectFormComponent implements OnInit {
     const selectedSkills = this.skillsFormArray.value
       .map((checked: boolean, i: number) => checked ? this.skills[i] : null)
       .filter((v: string | null) => v !== null);
-
+  
+    const keyImageFile = this.projectForm.value.keyImage; // Get the selected key image file
+    const galleryImageFiles = this.projectForm.value.gallery; // Get the selected gallery image files
+  
     const projectData: Project = {
       title: this.projectForm.value.title,
       highlight: this.projectForm.value.highlight,
@@ -109,18 +143,19 @@ export class ProjectFormComponent implements OnInit {
       skills: selectedSkills,
       category: selectedCategories,
       keyIMG: '', // Placeholder for the key image URL (to be updated later)
-      gallery:[] // Placeholder for the gallery image URLs (to be updated later)
+      gallery: [] // Placeholder for the gallery image URLs (to be updated later)
     };
-
-    this.portfolioService.addProject(projectData)
-    .then(() => {
-      // Reset the form and any other necessary operations after successful submission
-      this.projectForm.reset();
-    })
-    .catch((error) => {
-      // Handle any errors that occur during the submission
-      console.error('Error:', error);
-    });
-
+  
+    this.portfolioService.addProject(projectData, keyImageFile, galleryImageFiles) // Pass the key image file and gallery image files to the addProject method
+      .then(() => {
+        // Reset the form and any other necessary operations after successful submission
+        this.projectForm.reset();
+      })
+      .catch((error) => {
+        // Handle any errors that occur during the submission
+        console.error('Error:', error);
+      });
   }
+  
+ 
 }

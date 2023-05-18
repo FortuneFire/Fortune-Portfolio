@@ -35,10 +35,10 @@
               src="{{ project.keyIMG }}"
               alt="project-key-img"
             />
-            <h2>Project1</h2>
+            <h2>{{project.title}}</h2>
           </div>
           <div class="back from-bottom" (click)="onCardClick(project)">
-            <h2>Description</h2>
+            <h2>Highlights</h2>
             <p class="description">
               {{ project.highlight }}
             </p>
@@ -54,7 +54,6 @@
         <div class="project-details">
           <h3>Project Description</h3>
           <p>{{ selectedCard.description }}</p>
-          <h3>Project Description</h3>
           
           <ul class="skills">
             <li *ngFor="let skill of selectedCard.skills" class="skill">
@@ -64,10 +63,13 @@
         </div>
         <div class="project-images">
           <h3>Project Images</h3>
+          <div class="gallery-container">
+            <ng-container *ngFor="let gallery of selectedCard.gallery" >
+              <img class="profile-img" [src]="gallery" alt="project-key-img" />
+            </ng-container>
+          </div>
         </div>
       </div>
-
-      <!-- other details here -->
     </div>
   </section>
 </div>

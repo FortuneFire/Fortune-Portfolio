@@ -27,5 +27,11 @@
     </div>
   </div>
 
+  <label>Key Image:</label>
+  <input type="file" (change)="onKeyImageSelected($event)" accept="image/*"><br>
+
+  <label>Gallery Images:</label>
+  <input type="file" (change)="onGallerySelected($event)" accept="image/*" multiple><br>
+
   <button type="submit">Submit</button>
 </form>

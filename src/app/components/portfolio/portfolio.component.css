@@ -82,8 +82,8 @@ hr{
     bottom: 1rem;
     left: 50%;
     transform: translate(-50%, 0);
-    /* text-align: center; */
     text-shadow: 1px 1px 5px #000000;
+    white-space: nowrap;
   }
   
   .card .content{
@@ -223,4 +223,52 @@ hr{
   .cardVeiw-body{
     grid-template-columns: 1fr;
   }
+}
+
+/* img gallery */
+
+/* .gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  background: teal;
+  padding: 15px;
+}
+.gallery-container img {
+  width: 300px;
+  display: block;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  transition: all 100ms ease-out;
+}
+.gallery-container img:hover {
+  transform: scale(1.04);
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+} */
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  background: teal;
+  padding: 15px;
+}
+
+.gallery-container img {
+  width: 100%;
+  display: block;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  transition: all 100ms ease-out;
+}
+
+.gallery-container img:hover {
+  transform: scale(1.04);
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+
+.gallery-container ng-container {
+  grid-column: 1 / -1;
 }
